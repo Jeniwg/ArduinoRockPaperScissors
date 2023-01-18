@@ -15,7 +15,7 @@ C:/Users/carol/Dropbox/PC/Downloads/ArduinoRockPaperScissors/Arduino
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-60731
+52804
 Successfully changed project path to: C:/Users/carol/Dropbox/PC/Downloads/ArduinoRockPaperScissors/Arduino
 C:/Users/carol/Dropbox/PC/Downloads/ArduinoRockPaperScissors/Arduino
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/carol/Dropbox/PC/Downloads/ArduinoRockPaperScissors/Arduino
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 75.97 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 76.40 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.10f1 (1c7d0df0160b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/Resources/UnitySubsystems
@@ -63,89 +63,89 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56924
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56988
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004095 seconds.
+Registered in 0.007046 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 74.05 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 77.06 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.567 seconds
+- Completed reload, in  0.713 seconds
 Domain Reload Profiling:
-	ReloadAssembly (568ms)
-		BeginReloadAssembly (66ms)
+	ReloadAssembly (714ms)
+		BeginReloadAssembly (143ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (410ms)
-			LoadAssemblies (63ms)
+		EndReloadAssembly (458ms)
+			LoadAssemblies (141ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (86ms)
+			SetupTypeCache (100ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (26ms)
-			SetupLoadedEditorAssemblies (255ms)
+			RebuildScriptCaches (24ms)
+			SetupLoadedEditorAssemblies (285ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (74ms)
-				BeforeProcessingInitializeOnLoad (2ms)
+				RefreshPlugins (77ms)
+				BeforeProcessingInitializeOnLoad (1ms)
 				ProcessInitializeOnLoadAttributes (130ms)
-				ProcessInitializeOnLoadMethodAttributes (42ms)
+				ProcessInitializeOnLoadMethodAttributes (70ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004770 seconds.
+Registered in 0.005155 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\carol\Dropbox\PC\Downloads\ArduinoRockPaperScissors\Arduino\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\carol\Dropbox\PC\Downloads\ArduinoRockPaperScissors\Arduino\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.58 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.51 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.995 seconds
+- Completed reload, in  1.062 seconds
 Domain Reload Profiling:
-	ReloadAssembly (996ms)
-		BeginReloadAssembly (105ms)
+	ReloadAssembly (1063ms)
+		BeginReloadAssembly (138ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (22ms)
-		EndReloadAssembly (807ms)
-			LoadAssemblies (82ms)
+			CreateAndSetChildDomain (26ms)
+		EndReloadAssembly (836ms)
+			LoadAssemblies (129ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (272ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (49ms)
-			SetupLoadedEditorAssemblies (361ms)
+			SetupTypeCache (260ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (67ms)
+			SetupLoadedEditorAssemblies (352ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (11ms)
+				InitializePlatformSupportModulesInManaged (10ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (85ms)
-				ProcessInitializeOnLoadAttributes (236ms)
-				ProcessInitializeOnLoadMethodAttributes (24ms)
+				BeforeProcessingInitializeOnLoad (76ms)
+				ProcessInitializeOnLoadAttributes (233ms)
+				ProcessInitializeOnLoadMethodAttributes (26ms)
 				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 1.09 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 1.43 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3393 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 27 unused Assets / (113.4 KB). Loaded Objects now: 3850.
-Memory consumption went from 116.5 MB to 116.4 MB.
-Total: 6.455200 ms (FindLiveObjects: 0.452300 ms CreateObjectMapping: 0.460800 ms MarkObjects: 5.384700 ms  DeleteObjects: 0.155100 ms)
+Unloading 3406 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (113.4 KB). Loaded Objects now: 3864.
+Memory consumption went from 118.9 MB to 118.8 MB.
+Total: 3.209500 ms (FindLiveObjects: 0.332300 ms CreateObjectMapping: 0.110800 ms MarkObjects: 2.625100 ms  DeleteObjects: 0.139000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -159,71 +159,87 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 388369.787824 seconds.
-  path: Assets/Animations UI/Countdown 2.mp4
-  artifactKey: Guid(041cc877c5a4f9c48a6df961494bf029) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations UI/Countdown 2.mp4 using Guid(041cc877c5a4f9c48a6df961494bf029) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fd1816aa7eadd3e3ea2c6b93f3dad94') in 0.095324 seconds 
+  Time since last request: 523465.612618 seconds.
+  path: Assets/UI/Play.png
+  artifactKey: Guid(f6e34669b5a96e243840a8555149471e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Play.png using Guid(f6e34669b5a96e243840a8555149471e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8fd311c36df033c0596ded1eb723ce1') in 0.593433 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000200 seconds.
-  path: Assets/Animations UI/Tie round bg.mp4
-  artifactKey: Guid(53c3d3a2d0af5674cb0eef3075d1a305) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations UI/Tie round bg.mp4 using Guid(53c3d3a2d0af5674cb0eef3075d1a305) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f79e953601547a59d8e58a1a271ba1fc') in 0.011814 seconds 
+  Time since last request: 1878.519578 seconds.
+  path: Assets/UI/neutral circle.png
+  artifactKey: Guid(393a37808dedee34aa85420d5590666a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/neutral circle.png using Guid(393a37808dedee34aa85420d5590666a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dfb44da34821de4b5e830d5c5a01d60') in 0.116274 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/Animations UI/Countdown 3.mp4
-  artifactKey: Guid(da4a9fadcc5cd0742ba2a3af36be9a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations UI/Countdown 3.mp4 using Guid(da4a9fadcc5cd0742ba2a3af36be9a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b3dcd90b555e4e395d7d91960112ba2') in 0.012610 seconds 
+  Time since last request: 12.364288 seconds.
+  path: Assets/UI/neutral circle.png
+  artifactKey: Guid(393a37808dedee34aa85420d5590666a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/neutral circle.png using Guid(393a37808dedee34aa85420d5590666a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81c8fef5f0130ea1d5660b3e5d9413ef') in 0.033130 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000058 seconds.
-  path: Assets/Animations UI/Player wins rouns bg.mp4
-  artifactKey: Guid(ba2431619dcf56141bcb0621717e883c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations UI/Player wins rouns bg.mp4 using Guid(ba2431619dcf56141bcb0621717e883c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e211bd5eea16a5baed332d8b80b68fc') in 0.011306 seconds 
+  Time since last request: 0.000062 seconds.
+  path: Assets/UI/win circle.png
+  artifactKey: Guid(206e29316f5d1b84bb37bbb5b0d0f1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/win circle.png using Guid(206e29316f5d1b84bb37bbb5b0d0f1ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e8dcd9864ebbcc54c968554d3d2b367') in 0.026888 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000052 seconds.
-  path: Assets/Animations UI/Nobody wins battle.mp4
-  artifactKey: Guid(d67d6ff51652e324a828b32d54c43b31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations UI/Nobody wins battle.mp4 using Guid(d67d6ff51652e324a828b32d54c43b31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edfe64f9be89e533dac67f2f5d9bd010') in 0.011726 seconds 
+  Time since last request: 0.000087 seconds.
+  path: Assets/UI/SCORE.png
+  artifactKey: Guid(bd7d9dfdbfa0656428a108d442e02bb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/SCORE.png using Guid(bd7d9dfdbfa0656428a108d442e02bb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2d4968f34fa0741ecbb922ede98c752') in 0.025223 seconds 
 ========================================================================
-Received Import Request.
-  Time since last request: 0.000058 seconds.
-  path: Assets/Animations UI/Countdown 4.mp4
-  artifactKey: Guid(5282f91edf8c6c04494eb5fae7d2d5b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations UI/Countdown 4.mp4 using Guid(5282f91edf8c6c04494eb5fae7d2d5b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1d2fb8ff3b0468e41f56b2debfb7a71') in 0.010505 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 383.034409 seconds.
-  path: Assets/Backgrounds/RPS_No_Line.png
-  artifactKey: Guid(eaf298dfe1c375540b7d7c0cbffcb5a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Backgrounds/RPS_No_Line.png using Guid(eaf298dfe1c375540b7d7c0cbffcb5a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4007d31acab10d5690e048b93e9d6302') in 0.304299 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000069 seconds.
-  path: Assets/Backgrounds/RPS_Normal.png
-  artifactKey: Guid(1cb9509dab6b26c4f8c40fb708d0d69c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Backgrounds/RPS_Normal.png using Guid(1cb9509dab6b26c4f8c40fb708d0d69c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9ab3097020c0ebee5597592b2a8466d') in 0.018976 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/Backgrounds/RPS_Nobody_Wins.png
-  artifactKey: Guid(046b05834773207439f4c203703ae994) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Backgrounds/RPS_Nobody_Wins.png using Guid(046b05834773207439f4c203703ae994) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9cadff9f608f8d7b1d7f5dd2ecd6289') in 0.019955 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000051 seconds.
-  path: Assets/Backgrounds/RPS_Nothing.png
-  artifactKey: Guid(96809b5e8dcf0ec45a077b8421067a81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Backgrounds/RPS_Nothing.png using Guid(96809b5e8dcf0ec45a077b8421067a81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac899025a653ac33e4adf047b92d4c20') in 0.025659 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/Backgrounds/RPS_Win_Battle.png
-  artifactKey: Guid(554d684d14decb04da3e37d8aa3c139c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Backgrounds/RPS_Win_Battle.png using Guid(554d684d14decb04da3e37d8aa3c139c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd35f5c33aeec1e7a34eed476f4cb3820') in 0.029786 seconds 
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006470 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\carol\Dropbox\PC\Downloads\ArduinoRockPaperScissors\Arduino\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\carol\Dropbox\PC\Downloads\ArduinoRockPaperScissors\Arduino\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.21 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.507 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2511ms)
+		BeginReloadAssembly (787ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (43ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (1ms)
+			CreateAndSetChildDomain (394ms)
+		EndReloadAssembly (1564ms)
+			LoadAssemblies (173ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (482ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (74ms)
+			SetupLoadedEditorAssemblies (763ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (62ms)
+				SetLoadedEditorAssemblies (10ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (132ms)
+				ProcessInitializeOnLoadAttributes (495ms)
+				ProcessInitializeOnLoadMethodAttributes (52ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (16ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3388 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (80.1 KB). Loaded Objects now: 3874.
+Memory consumption went from 117.5 MB to 117.4 MB.
+Total: 9.807600 ms (FindLiveObjects: 0.729400 ms CreateObjectMapping: 1.375000 ms MarkObjects: 6.943800 ms  DeleteObjects: 0.755700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
