@@ -9,6 +9,8 @@ public class Game : MonoBehaviour
     private MyListener myListener;
     [SerializeField]
     private SceneManage sceneManager;
+    [SerializeField]
+    private Animator anim;
     private int compInput;
     private int playInput;
 
@@ -147,6 +149,11 @@ public class Game : MonoBehaviour
             Debug.Log("bruh");
             yield break;
         }
+        else
+        {
+          anim.SetTrigger("CountDown");  
+        }
+        
 
         yield return new WaitForSeconds(3f);
         compInput = Random.Range(0, 2);
