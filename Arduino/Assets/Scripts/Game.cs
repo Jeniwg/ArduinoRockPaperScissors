@@ -10,7 +10,7 @@ public class Game : MonoBehaviour
     [SerializeField]
     private SceneManage sceneManager;
     [SerializeField]
-    private Animator anim;
+    private UnityEngine.Video.VideoPlayer videoPlayer;
     private int compInput;
     private int playInput;
 
@@ -26,13 +26,15 @@ public class Game : MonoBehaviour
 
     //Screens
     [SerializeField]
-    private GameObject pauseScreen;
-    [SerializeField]
     private GameObject loseScreen;
     [SerializeField]
     private GameObject winScreen;
     [SerializeField]
     private GameObject tieScreen;
+    [SerializeField]
+    private GameObject gameScreen;
+    [SerializeField]
+    private GameObject video;
 
     //UI Score
     [SerializeField]
@@ -55,6 +57,14 @@ public class Game : MonoBehaviour
     void Start()
     {
         lastInput = myListener.PlayerInput;
+        gameScreen.SetActive(false);
+        StartCoroutine("startWait");
+    }
+
+    IEnumerator startWait()
+    {
+        yield return new WaitForSeconds(3.5f);
+        gameScreen.SetActive(true);
         StartCoroutine("timer");
     }
 
@@ -76,26 +86,10 @@ public class Game : MonoBehaviour
             hand.sprite = pp;
         }
 
-        if (Input.GetKey(KeyCode.Escape) && !isInMenu)
-        {
-            pauseScreen.SetActive(true);
-            isInMenu = true;
-        }
-        else if (pauseScreen.activeSelf && !isInMenu)
-        {
-            isInMenu = true;
-        }
-
         int currentInput = myListener.PlayerInput;
 
         if (isInMenu)
         {
-            if (Input.GetKey(KeyCode.Escape))
-            {
-                isInMenu = false;
-                pauseScreen.SetActive(false);
-            }
-
             if (time >= 5f)
             {
                 switch (lastInput)
@@ -104,18 +98,9 @@ public class Game : MonoBehaviour
                         sceneManager.OpenMainMenu();
                         break;
                     case 2:
-                        if (pauseScreen.activeSelf)
-                        {
-                            isInMenu = false;
-                            pauseScreen.SetActive(false);
-                            time = 0;
-                            StartCoroutine("timer");
-                        }
-                        else
-                        {
-                            isInMenu = false;
-                            sceneManager.OpenGame();
-                        }
+                        isInMenu = false;
+                        sceneManager.OpenGame();
+
                         break;
                 }
             }
@@ -125,7 +110,7 @@ public class Game : MonoBehaviour
                 if (currentInput == lastInput)
                 {
                     time = time + Time.deltaTime;
-                    
+
                 }
                 else
                 {
@@ -144,18 +129,40 @@ public class Game : MonoBehaviour
 
     IEnumerator timer()
     {
-        if(isInMenu)
+        if (isInMenu)
         {
             Debug.Log("bruh");
             yield break;
         }
-        else
+        else if (!isInMenu)
         {
-          anim.SetTrigger("CountDown");  
+            switch (rounds)
+            {
+                case 0:
+                    videoPlayer.url = "Assets/Animations UI/Countdown 1.mp4";
+                    videoPlayer.Play();
+                    break;
+                case 1:
+                    videoPlayer.url = "Assets/Animations UI/Countdown 2.mp4";
+                    videoPlayer.Play();
+                    break;
+                case 2:
+                    videoPlayer.url = "Assets/Animations UI/Countdown 3.mp4";
+                    videoPlayer.Play();
+                    break;
+                case 3:
+                    videoPlayer.url = "Assets/Animations UI/Countdown 4.mp4";
+                    videoPlayer.Play();
+                    break;
+                case 4:
+                    videoPlayer.url = "Assets/Animations UI/Countdown 5.mp4";
+                    videoPlayer.Play();
+                    break;
+            }
         }
-        
 
-        yield return new WaitForSeconds(3f);
+
+        yield return new WaitForSeconds(7f);
         compInput = Random.Range(0, 2);
         Debug.Log("compInput: " + compInput);
         playInput = myListener.PlayerInput;
@@ -168,7 +175,9 @@ public class Game : MonoBehaviour
             score[rounds].sprite = tie;
             scoreSave[rounds] = 0;
             rounds++;
-            StartCoroutine("timer");
+            videoPlayer.url = "Assets/Animations UI/Tie round bg.mp4";
+            videoPlayer.Play();
+            StartCoroutine("roundEnd");
         }
         else if (compInput == 0)
         {
@@ -178,13 +187,17 @@ public class Game : MonoBehaviour
                     score[rounds].sprite = lose;
                     scoreSave[rounds] = -1;
                     rounds++;
-                    StartCoroutine("timer");
+                    videoPlayer.url = "Assets/Animations UI/PC wins round bg.mp4";
+                    videoPlayer.Play();
+                    StartCoroutine("roundEnd");
                     break;
                 case 2:
                     score[rounds].sprite = win;
                     scoreSave[rounds] = 1;
                     rounds++;
-                    StartCoroutine("timer");
+                    videoPlayer.url = "Assets/Animations UI/Player wins rouns bg.mp4";
+                    videoPlayer.Play();
+                    StartCoroutine("roundEnd");
                     break;
             }
         }
@@ -196,13 +209,17 @@ public class Game : MonoBehaviour
                     score[rounds].sprite = win;
                     scoreSave[rounds] = 1;
                     rounds++;
-                    StartCoroutine("timer");
+                    videoPlayer.url = "Assets/Animations UI/Player wins rouns bg.mp4";
+                    videoPlayer.Play();
+                    StartCoroutine("roundEnd");
                     break;
                 case 2:
                     score[rounds].sprite = lose;
                     scoreSave[rounds] = -1;
                     rounds++;
-                    StartCoroutine("timer");
+                    videoPlayer.url = "Assets/Animations UI/PC wins round bg.mp4";
+                    videoPlayer.Play();
+                    StartCoroutine("roundEnd");
                     break;
             }
         }
@@ -214,13 +231,17 @@ public class Game : MonoBehaviour
                     score[rounds].sprite = lose;
                     scoreSave[rounds] = -1;
                     rounds++;
-                    StartCoroutine("timer");
+                    videoPlayer.url = "Assets/Animations UI/PC wins round bg.mp4";
+                    videoPlayer.Play();
+                    StartCoroutine("roundEnd");
                     break;
                 case 1:
                     score[rounds].sprite = win;
                     scoreSave[rounds] = 1;
                     rounds++;
-                    StartCoroutine("timer");
+                    videoPlayer.url = "Assets/Animations UI/Player wins rouns bg.mp4";
+                    videoPlayer.Play();
+                    StartCoroutine("roundEnd");
                     break;
             }
         }
@@ -229,8 +250,15 @@ public class Game : MonoBehaviour
 
         if (rounds == 5)
         {
+            yield return new WaitForSeconds(2f);
             Verify();
         }
+    }
+
+    IEnumerator roundEnd()
+    {
+        yield return new WaitForSeconds(2.5f);
+        StartCoroutine("timer");
     }
 
     private void Verify()
@@ -274,6 +302,9 @@ public class Game : MonoBehaviour
     private void CompWin()
     {
         Debug.Log("COMPUTER WIN");
+        gameScreen.SetActive(false);
+        videoPlayer.url = "Assets/Animations UI/PC wins battle.mp4";
+        videoPlayer.Play();
         loseScreen.SetActive(true);
         isInMenu = true;
     }
@@ -281,6 +312,9 @@ public class Game : MonoBehaviour
     private void PlayWin()
     {
         Debug.Log("PLAYER WIN");
+        gameScreen.SetActive(false);
+        videoPlayer.url = "Assets/Animations UI/Player wins battle.mp4";
+        videoPlayer.Play();
         winScreen.SetActive(true);
         isInMenu = true;
     }
@@ -288,6 +322,9 @@ public class Game : MonoBehaviour
     private void Tie()
     {
         Debug.Log("TIE");
+        gameScreen.SetActive(false);
+        videoPlayer.url = "Assets/Animations UI/Nobody wins battle.mp4";
+        videoPlayer.Play();
         tieScreen.SetActive(true);
         isInMenu = true;
     }
