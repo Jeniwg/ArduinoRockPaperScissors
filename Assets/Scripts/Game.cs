@@ -61,6 +61,8 @@ public class Game : MonoBehaviour
         StartCoroutine("startWait");
     }
 
+    //Tempo do video vs
+    //Ativa ecrã de jogo e começa o count down;
     IEnumerator startWait()
     {
         yield return new WaitForSeconds(3.5f);
@@ -69,8 +71,10 @@ public class Game : MonoBehaviour
     }
 
     // Update is called once per frame
+    
     void Update()
     {
+        //muda o preview dependendo do nosso input
         if (myListener.PlayerInput == 0)
         {
             hand.sprite = rck;
@@ -85,7 +89,8 @@ public class Game : MonoBehaviour
         {
             hand.sprite = pp;
         }
-
+        
+        //Caso tiver nalgum tipo de ecrã (win lose tie) para ler o input de 5 sec
         int currentInput = myListener.PlayerInput;
 
         if (isInMenu)
@@ -129,12 +134,12 @@ public class Game : MonoBehaviour
 
     IEnumerator timer()
     {
+        //Se tiver no menu não entrar em countdown
         if (isInMenu)
         {
-            Debug.Log("bruh");
             yield break;
         }
-        else if (!isInMenu)
+        else if (!isInMenu) // dependendo da round mostra videos diferentes
         {
             switch (rounds)
             {
@@ -161,14 +166,16 @@ public class Game : MonoBehaviour
             }
         }
 
-
+        //tempo de espera para countdown/video passar
         yield return new WaitForSeconds(7f);
-        compInput = Random.Range(0, 2);
-        Debug.Log("compInput: " + compInput);
-        playInput = myListener.PlayerInput;
-        Debug.Log("PlayInput: " + playInput);
 
-        Debug.Log(rounds);
+        //INPUT FINAIS
+        compInput = Random.Range(0, 2);
+        playInput = myListener.PlayerInput;
+
+        //Verificar resultados
+        //Marcar resultado e mostrar video 
+        //Coroutine para dar tempo do video acabar antes da próxima round
         if (compInput == playInput)
         {
             Debug.Log("IMPATE");
@@ -246,21 +253,23 @@ public class Game : MonoBehaviour
             }
         }
 
-        Debug.Log(rounds);
-
+        //Quando as Rounds acabar 
         if (rounds == 5)
         {
+            //tempo para ver ultima play
             yield return new WaitForSeconds(2f);
             Verify();
         }
     }
 
+    //Coroutine para dar tempo do video acabar e começar próxima round
     IEnumerator roundEnd()
     {
         yield return new WaitForSeconds(2.5f);
         StartCoroutine("timer");
     }
 
+    //verificar resultado
     private void Verify()
     {
         int zero = 0;
@@ -283,6 +292,7 @@ public class Game : MonoBehaviour
             }
         }
 
+        //O maior dos 3
         string max = zero >= one && zero >= minusOne ? "zero" : one >= zero && one >= minusOne ? "one" : "minusOne";
 
         switch (max)
@@ -299,6 +309,7 @@ public class Game : MonoBehaviour
         }
     }
 
+    //ecra lose
     private void CompWin()
     {
         Debug.Log("COMPUTER WIN");
@@ -309,6 +320,7 @@ public class Game : MonoBehaviour
         isInMenu = true;
     }
 
+    //ecra win
     private void PlayWin()
     {
         Debug.Log("PLAYER WIN");
@@ -319,6 +331,7 @@ public class Game : MonoBehaviour
         isInMenu = true;
     }
 
+    //ecra tie
     private void Tie()
     {
         Debug.Log("TIE");

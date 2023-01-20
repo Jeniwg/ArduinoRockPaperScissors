@@ -9,13 +9,8 @@ public class MyListener : MonoBehaviour
 
     public int PlayerInput = 4;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
+    //Assign do input do jogador
     void Update()
     {        
         //Verificar Pedra
@@ -38,6 +33,7 @@ public class MyListener : MonoBehaviour
         }
     }
 
+    //recebe print de arduino 
     void OnMessageArrived(string msg)
     {
         string[] elements = msg.Split(' ');

@@ -26,8 +26,10 @@ public class MainMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //get input from listener
         int currentInput = myListener.PlayerInput;
 
+        //se não estiver no HOw to play verifica qual é o input de 5 sec
         if (!isInHTP)
         {
             if (timer >= 5f)
@@ -62,7 +64,7 @@ public class MainMenu : MonoBehaviour
                 }
             }
         }
-        else
+        else // quando estiver no HTP verifica se fez pedra por 5sec
         {
             if (timer >= 5f)
             {
