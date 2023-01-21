@@ -14,15 +14,43 @@ public class Game : MonoBehaviour
     private int compInput;
     private int playInput;
 
-    //To Visualize your moves
+    //To Visualize your moves and player hands
     [SerializeField]
-    private Image hand;
+    private Image handPreview;
+    [SerializeField]
+    private Image playHand;
     [SerializeField]
     private Sprite scss;
     [SerializeField]
     private Sprite pp;
     [SerializeField]
     private Sprite rck;
+    [SerializeField]
+    private Sprite playAnti;
+
+    //PC Hands
+    [SerializeField]
+    private Image pcHand;
+    [SerializeField]
+    private Sprite pcRck;
+    [SerializeField]
+    private Sprite pcScss;
+    [SerializeField]
+    private Sprite pcPp;
+
+    //PC Anti Hands
+    [SerializeField]
+    private Sprite pcRckAnti;
+    [SerializeField]
+    private Sprite pcScssAnti;
+    [SerializeField]
+    private Sprite pcPpAnti;
+
+    //Animators
+    [SerializeField]
+    private Animator playAnim;
+    [SerializeField]
+    private Animator pcAnim;
 
     //Screens
     [SerializeField]
@@ -77,17 +105,17 @@ public class Game : MonoBehaviour
         //muda o preview dependendo do nosso input
         if (myListener.PlayerInput == 0)
         {
-            hand.sprite = rck;
+            handPreview.sprite = rck;
         }
 
         if (myListener.PlayerInput == 1)
         {
-            hand.sprite = scss;
+            handPreview.sprite = scss;
         }
 
         if (myListener.PlayerInput == 2)
         {
-            hand.sprite = pp;
+            handPreview.sprite = pp;
         }
         
         //Caso tiver nalgum tipo de ecrã (win lose tie) para ler o input de 5 sec
@@ -134,6 +162,8 @@ public class Game : MonoBehaviour
 
     IEnumerator timer()
     {
+        pcHand.gameObject.SetActive(false);
+        playHand.gameObject.SetActive(false);
         //Se tiver no menu não entrar em countdown
         if (isInMenu)
         {
@@ -166,26 +196,33 @@ public class Game : MonoBehaviour
             }
         }
 
+        yield return new WaitForSeconds(2f);
+
+        pcHand.gameObject.SetActive(true);
+        playHand.gameObject.SetActive(true);
+
         //Dependendo do output do pc a mão dele muda
         compInput = Random.Range(0, 2);
 
         switch (compInput)
         {
             case 0:
-            //rck anti
+            pcHand.sprite = pcRckAnti;
             break;
             case 1: 
-            //scss anti
+            pcHand.sprite = pcScssAnti;
             break;
             case 2:
-            //pp anti
+            pcHand.sprite = pcPpAnti;
             break;
         }
+        pcAnim.SetTrigger("PcAnti");
 
-        //player anti 
+        playHand.sprite = playAnti;
+        playAnim.SetTrigger("PlayAnti");
 
         //tempo de espera para countdown/video passar
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(5f);
 
         //INPUT FINAL -> mostrar as mãos do input
         playInput = myListener.PlayerInput;
@@ -193,26 +230,26 @@ public class Game : MonoBehaviour
         switch (playInput)
         {
             case 0:
-            //show rock
+            playHand.sprite = rck;
             break;
             case 1:
-            //show scss
+            playHand.sprite = scss;
             break;
             case 2:
-            //show pp
+            playHand.sprite = pp;
             break;
         }
 
         switch (compInput)
         {
             case 0:
-            //show rock
+            pcHand.sprite = pcRck;
             break;
             case 1:
-            //show scss
+            pcHand.sprite = pcScss;
             break;
             case 2:
-            //show pp
+            pcHand.sprite = pcPp;
             break;
         }
 
