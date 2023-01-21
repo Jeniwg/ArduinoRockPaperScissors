@@ -166,12 +166,55 @@ public class Game : MonoBehaviour
             }
         }
 
+        //Dependendo do output do pc a mão dele muda
+        compInput = Random.Range(0, 2);
+
+        switch (compInput)
+        {
+            case 0:
+            //rck anti
+            break;
+            case 1: 
+            //scss anti
+            break;
+            case 2:
+            //pp anti
+            break;
+        }
+
+        //player anti 
+
         //tempo de espera para countdown/video passar
         yield return new WaitForSeconds(7f);
 
-        //INPUT FINAIS
-        compInput = Random.Range(0, 2);
+        //INPUT FINAL -> mostrar as mãos do input
         playInput = myListener.PlayerInput;
+
+        switch (playInput)
+        {
+            case 0:
+            //show rock
+            break;
+            case 1:
+            //show scss
+            break;
+            case 2:
+            //show pp
+            break;
+        }
+
+        switch (compInput)
+        {
+            case 0:
+            //show rock
+            break;
+            case 1:
+            //show scss
+            break;
+            case 2:
+            //show pp
+            break;
+        }
 
         //Verificar resultados
         //Marcar resultado e mostrar video 
